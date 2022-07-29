@@ -1,0 +1,57 @@
+# derived from woju's config
+
+[core]
+	editor = /usr/bin/subl -n -w
+[user]
+	email = redford@dragonsector.pl
+	name = Michał Kowalczyk
+[push]
+	default = current
+[pull]
+    rebase = false
+    ff = only
+
+[alias]
+    ap = add -p
+    ci = commit
+    cif = commit --fixup
+
+    ff = merge --ff-only
+    co = checkout
+    sw = switch
+    cp = cherry-pick --ff
+
+    b = branch
+    br = branch
+    ba = branch -a
+
+    st = status
+    d = diff
+    dc = diff --cached
+    dt = difftool
+    dtc = difftool --cached
+    ds = diff --stat
+    dcs = diff --cached --stat
+    dbr = "!id=$(git merge-base master HEAD); git diff ${id}..HEAD"
+    bl = blame
+
+    l = log
+    lp = log -p
+    lpr = log -p --reverse
+    l1 = log --oneline --no-decorate
+    lg1 = log --graph --oneline --no-decorate
+    lbr = "!id=$(git merge-base master HEAD); git log --no-decorate ${id}..HEAD"
+    lbr1 = "!id=$(git merge-base master HEAD); git log --no-decorate --oneline ${id}..HEAD"
+    head = log -n1
+
+    fgrep = grep -Fn
+
+    fpn = format-patch -N
+    fpt = format-patch --cover-letter --thread=shallow
+    am3 = am -3
+    amc = am --continue
+
+    gconfig = config --global
+
+    rc = rebase --continue
+    rbr = "!id=$(git merge-base master HEAD); git rebase -i ${id}"
